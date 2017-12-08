@@ -26,10 +26,12 @@
 
   <#if firstNames??>
     <#list firstNames as firstName>
+      <p>${firstName}
+    <#else>
+      <p>No members.
     </#list>
   </#if>
 
-   <!--WORK ON THIS DIV FOR THE SERVER -->
     <div class="table">
       <table>
         <th>Last Name</th>

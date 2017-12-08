@@ -26,6 +26,7 @@ public class Signup extends HttpServlet {
 	//This the folder the it will return too
 	private String templateDir = "/WEB-INF";
 	private TemplateProcessor templateProcessor = null;
+	JoinMembersList logicLayer = new JoinMembersList();
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -68,22 +69,19 @@ public class Signup extends HttpServlet {
 
         String fname = request.getParameter("fname");
         String lname = request.getParameter("lname");
-        String email = request.getParameter("email");
-		
-		
-        JoinMembersList logicLayer = new JoinMembersList();
+        String email = request.getParameter("email");        
 
 		try {
 			//logicLayer.join(fname, lname, email);
             templateProcessor.setTemplate("/members.ftl");
 			
-//            ArrayList<String> firstNames = logicLayer.getFirstName();
-//            ArrayList<String> lastNames = logicLayer.getLastName();
-//            ArrayList<String> emails = logicLayer.getEmail();
-//            
-//			templateProcessor.addToRoot("firstNames", firstNames);
-//            templateProcessor.addToRoot("lastNames", lastNames);
-//            templateProcessor.addToRoot("emails", emails);
+            ArrayList<String> firstNames = logicLayer.getFirstName();
+            ArrayList<String> lastNames = logicLayer.getLastName();
+            ArrayList<String> emails = logicLayer.getEmail();
+            
+			templateProcessor.addToRoot("firstNames", firstNames);
+            templateProcessor.addToRoot("lastNames", lastNames);
+            templateProcessor.addToRoot("emails", emails);
 			templateProcessor.processTemplate(response);
 			return;
 

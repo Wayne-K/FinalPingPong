@@ -1,6 +1,8 @@
 package pingpongpackage;
 
 import java.io.IOException;
+import java.util.ArrayList;
+
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -23,6 +25,7 @@ public class DisplayList extends HttpServlet {
 	//This the folder the it will return too
 	private String templateDir = "/WEB-INF";
 	private TemplateProcessor templateProcessor = null;
+	JoinMembersList logicLayer = new JoinMembersList();
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -61,6 +64,12 @@ public class DisplayList extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String status = "";
+		
+		
+		//ArrayList<String> firstNames = logicLayer.getFirstName();
+		ArrayList<String> firstNames = null;
+         
+		templateProcessor.addToRoot("firstNames", firstNames);
 		
 		templateProcessor.setTemplate("members.ftl");
 		templateProcessor.processTemplate(response);
