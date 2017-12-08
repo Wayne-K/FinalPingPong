@@ -41,7 +41,7 @@
 
 
     <h1>Become a Member</h1>
-    <form action="signup.html">
+    <form action="signup.ftl">
       <input type="submit" value="Sign Up">
     </form>
 

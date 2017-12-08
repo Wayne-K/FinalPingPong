@@ -66,29 +66,24 @@ public class Signup extends HttpServlet {
 		String statusSignUpG = "";
 		String statusSignUpB = "";
 
-        String fname = request.getParameter("fname");
-        String lname = request.getParameter("lname");
-        String email = request.getParameter("email");
+//        String fname = request.getParameter("fname");
+//        String lname = request.getParameter("lname");
+//        String email = request.getParameter("email");
 		
-		
-		//User user = session.getUser();
-		//int customerId = (int) user.getId();
-		//templateProcessor.addToRoot("user", user.getFirstName());
-		//templateProcessor.addToRoot("userSession", user);
 		
         JoinMembersList logicLayer = new JoinMembersList();
 
 		try {
-			logicLayer.join(fname, lname, email);
+			//logicLayer.join(fname, lname, email);
             templateProcessor.setTemplate("/members.ftl");
 			
-            ArrayList<String> firstNames = logicLayer.getFirstName();
-            ArrayList<String> lastNames = logicLayer.getLastName();
-            ArrayList<String> emails = logicLayer.getEmail();
-            
-			templateProcessor.addToRoot("firstNames", firstNames);
-            templateProcessor.addToRoot("lastNames", lastNames);
-            templateProcessor.addToRoot("emails", emails);
+//            ArrayList<String> firstNames = logicLayer.getFirstName();
+//            ArrayList<String> lastNames = logicLayer.getLastName();
+//            ArrayList<String> emails = logicLayer.getEmail();
+//            
+//			templateProcessor.addToRoot("firstNames", firstNames);
+//            templateProcessor.addToRoot("lastNames", lastNames);
+//            templateProcessor.addToRoot("emails", emails);
 			templateProcessor.processTemplate(response);
 			return;
 
