@@ -1,0 +1,120 @@
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+
+body, html {
+    height: 100%;
+    color: #777;
+    line-height: 1.8;
+    margin:0;
+}
+
+
+.nav {
+	padding: 10px;
+	min-width: 900px;
+	color:inherit;
+	background-color: black;
+}
+
+.nav a {
+	width: 100%;
+	font-weight:400;
+	padding-top: 20px;
+	padding: 10px;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: white;
+}
+
+.nav a:hover {
+	color:#000;
+	background-color:#ccc;
+	padding: 10px;
+}
+
+.img1 {
+    background-image: url('img1.jpg');
+    min-height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: .9;
+}
+
+.span {
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	-ms-transform:translate(-50%,-50%);
+	padding:12px 24px;
+	color: white;
+	background-color: black;
+	font-size: 24px;
+	letter-spacing:5px
+}
+
+.contact, h1 {
+	padding-right: 25px;
+	padding-left: 25px;
+}
+
+.contact {
+	padding-bottom: 25px;
+}
+
+.posts, .schedule {
+	padding-left: 75px;
+	padding-bottom: 45px;
+}
+
+.contact-text {
+	font-size: 16px;
+}
+
+.date, .txt {
+	margin-left: 20px;
+}
+
+.title {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+
+.schedule table {
+    border-collapse: collapse;
+}
+
+.schedule table th {
+	text-align: left;
+	background-color: #3a6070;
+	color: #FFF;
+	padding: 4px 30px 4px 8px;
+}
+
+.schedule table td {
+	border: 1px solid #e3e3e3;
+	padding: 4px 8px;
+}
+
+.schedule table tr:nth-child(odd) td {
+	background-color: #e7edf0;
+}
+
+.PPHeader {
+	text-align:center;
+	color:#FFA07A;
+}
+
+.galleryPics {
+	margin: auto;
+	width: 600px;
+	height:400px;
+	margin-top:25px;
+	margin-bottom:25px:;
+}
+
+.schedule table tr:nth-child(even) td {
+	background-color: #FFF;
+}
