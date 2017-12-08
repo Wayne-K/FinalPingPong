@@ -25,7 +25,7 @@
     <h1>Members</h1>
 
   <#if firstNames??>
-    <#list firstNames as firstName
+    <#list firstNames as firstName>
     </#list>
   </#if>
 
