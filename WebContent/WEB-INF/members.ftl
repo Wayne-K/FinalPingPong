@@ -24,6 +24,11 @@
   <div class="main">
     <h1>Members</h1>
 
+  <#if firstNames??>
+    <#list firstNames as firstName
+    </#list>
+  </#if>
+
    <!--WORK ON THIS DIV FOR THE SERVER -->
     <div class="table">
       <table>
