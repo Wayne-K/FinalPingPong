@@ -66,9 +66,9 @@ public class Signup extends HttpServlet {
 		String statusSignUpG = "";
 		String statusSignUpB = "";
 
-//        String fname = request.getParameter("fname");
-//        String lname = request.getParameter("lname");
-//        String email = request.getParameter("email");
+        String fname = request.getParameter("fname");
+        String lname = request.getParameter("lname");
+        String email = request.getParameter("email");
 		
 		
         JoinMembersList logicLayer = new JoinMembersList();
