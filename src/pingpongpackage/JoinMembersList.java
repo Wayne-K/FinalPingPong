@@ -15,14 +15,24 @@ public class JoinMembersList
 	
 	public JoinMembersList()
 	{
+		/* String dbName = "TermProject";
+         String url = "jdbc:mysql://172.17.149.114:3306/" + dbName;
+         String uname = "root";
+         String pwd="NEWPASSWORD";*/
+		String dbName = "TermProject";
+        String url = "jdbc:mysql://localhost:3306/" + dbName;
+        String uname = "root";
+        String pwd="";
 	try {
-                Class.forName("org.mariadb.jdbc.Driver");
+                //Class.forName("org.mariadb.jdbc.Driver");
+                Class.forName("com.mysql.jdbc.Driver");
             } catch (ClassNotFoundException e) {
                 e.printStackTrace();
             }
 
             try {
-                this.connection = DriverManager.getConnection("jdbc:mariadb://localhost:3306/TermProject?user=root");
+    			this.connection = DriverManager.getConnection(url, uname, pwd); 
+            	// this.connection = DriverManager.getConnection("jdbc:mariadb://172.17.149.114:3306/test?user=root");
                 System.out.println("connected!");
             } catch (SQLException e) {
                 e.printStackTrace();
