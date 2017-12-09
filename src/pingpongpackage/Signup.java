@@ -73,16 +73,14 @@ public class Signup extends HttpServlet {
         String email = request.getParameter("email");        
 
 		try {
-			//logicLayer.join(fname, lname, email);
+			logicLayer.join(fname, lname, email);
             templateProcessor.setTemplate("/members.ftl");
 			
-//            List<String> firstNames = logicLayer.getFirstName();
-//            List<String> lastNames = logicLayer.getLastName();
-//            List<String> emails = logicLayer.getEmail();
-            
-//			templateProcessor.addToRoot("firstNames", firstNames);
-//            templateProcessor.addToRoot("lastNames", lastNames);
-//            templateProcessor.addToRoot("emails", emails);
+            List<String> firstNames = logicLayer.getFirstName();
+//            List<String> firstNames = new ArrayList<String>();
+//            firstNames.add("Wayne");
+//            firstNames.add("Bob");
+			templateProcessor.addToRoot("firstNames", firstNames);
 			templateProcessor.processTemplate(response);
 			return;
 
