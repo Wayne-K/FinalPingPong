@@ -6,11 +6,12 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.List;
 
 public class JoinMembersList
 {
 	public Connection connection;
-	public ArrayList<String> resultString;
+	public List<String> resultString;
 	private ResultSet results;
 	
 	public JoinMembersList()
@@ -69,7 +70,7 @@ public class JoinMembersList
 		}
 	}
 	
-	public ArrayList<String> getFirstName()
+	public List<String> getFirstName()
 	{
 		display();
 		resultString = new ArrayList<String>();
@@ -85,7 +86,7 @@ public class JoinMembersList
 		return resultString;
 	}
 	
-		public ArrayList<String> getLastName()
+		public List<String> getLastName()
 	{
 		display();
 		resultString = new ArrayList<String>();
@@ -102,7 +103,7 @@ public class JoinMembersList
 		return resultString;
 	}
 	
-		public ArrayList<String> getEmail()
+		public List<String> getEmail()
 	{
 		display();
 		resultString = new ArrayList<String>();
