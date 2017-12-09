@@ -62,8 +62,10 @@ public class JoinMembersList
 	{
 		String query = "SELECT first_name, last_name, email FROM Student";
 		try{
-			PreparedStatement ps = connection.prepareStatement(query);
-			ps.executeQuery();
+//			PreparedStatement ps = connection.prepareStatement(query);
+//			ps.executeQuery();
+			java.sql.Statement stmt = connection.createStatement();
+			stmt.executeQuery(query);
 		}
 		catch (SQLException e) {
 			e.printStackTrace();
