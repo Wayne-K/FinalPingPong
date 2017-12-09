@@ -80,7 +80,7 @@ public class Signup extends HttpServlet {
 //            List<String> firstNames = new ArrayList<String>();
 //            firstNames.add("Wayne");
 //            firstNames.add("Bob");
-			templateProcessor.addToRoot("firstNames", firstNames);
+			//templateProcessor.addToRoot("firstNames", firstNames);
 			templateProcessor.processTemplate(response);
 			return;
 
