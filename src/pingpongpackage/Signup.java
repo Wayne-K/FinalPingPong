@@ -80,7 +80,7 @@ public class Signup extends HttpServlet {
 
 		try {
 			logicLayer.join(fname, lname, email);
-            templateProcessor.setTemplate("/members.ftl");
+            templateProcessor.setTemplate("/index.ftl");
 			
             ArrayList<String> firstNames = logicLayer.getFirstName();
             ArrayList<String> lastNames = logicLayer.getLastName();
