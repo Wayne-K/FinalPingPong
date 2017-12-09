@@ -35,6 +35,7 @@ public class JoinMembersList
    			this.connection = DriverManager.getConnection(url, uname, pwd); 
            	// this.connection = DriverManager.getConnection("jdbc:mariadb://172.17.149.114:3306/test?user=root");
                System.out.println("connected!");
+               System.out.println("pandacat");
            } catch (SQLException e) {
                e.printStackTrace();
            }
@@ -42,6 +43,7 @@ public class JoinMembersList
 	
 	public void join(String fname, String lname, String email)
 	{
+		System.out.println("I'm working");
 		String query = "INSERT INTO Student (first_name, last_name, email, password, Admin)" + "VALUES (?, ?, ?, ?, ?)";
 		try {
 			PreparedStatement ps = connection.prepareStatement(query);
