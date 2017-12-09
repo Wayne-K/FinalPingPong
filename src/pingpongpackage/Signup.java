@@ -2,6 +2,7 @@ package pingpongpackage;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
@@ -75,9 +76,9 @@ public class Signup extends HttpServlet {
 			//logicLayer.join(fname, lname, email);
             templateProcessor.setTemplate("/members.ftl");
 			
-            ArrayList<String> firstNames = logicLayer.getFirstName();
-            ArrayList<String> lastNames = logicLayer.getLastName();
-            ArrayList<String> emails = logicLayer.getEmail();
+            List<String> firstNames = logicLayer.getFirstName();
+            List<String> lastNames = logicLayer.getLastName();
+            List<String> emails = logicLayer.getEmail();
             
 			templateProcessor.addToRoot("firstNames", firstNames);
             templateProcessor.addToRoot("lastNames", lastNames);
