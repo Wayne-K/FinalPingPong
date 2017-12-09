@@ -80,15 +80,10 @@ public class Signup extends HttpServlet {
 
 		try {
 			logicLayer.join(fname, lname, email);
+			System.out.println("inserted into db");
             templateProcessor.setTemplate("/index.ftl");
+			System.out.println("set template to index.ftl");
 			
-            ArrayList<String> firstNames = logicLayer.getFirstName();
-            ArrayList<String> lastNames = logicLayer.getLastName();
-            ArrayList<String> emails = logicLayer.getEmail();
-            
-			templateProcessor.addToRoot("firstNames", firstNames);
-            templateProcessor.addToRoot("lastNames", lastNames);
-            templateProcessor.addToRoot("emails", emails);
 			templateProcessor.processTemplate(response);
 			return;
 
